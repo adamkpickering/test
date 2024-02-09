@@ -1,0 +1,50 @@
+October 31, 2023
+
+To Do
+- Groom to do list
+- Check "latest" AppImage
+- Remove windows exclusion from BATS test
+- Read into pointer vs value receivers
+- Create issue: address Mark's comment about ExitError
+- Put card into clsr: using platform-specific syscall pkg
+- Put card into clsr: how regexp package works
+- Put card into clsr: checking for file existence (three states, see SO)
+- Do not print error twice in wj
+- Do not print error twice in clsr
+- Add date field to wj
+
+Done
+- Test 1.11 RC2
+- Make changes to OBS for 1.11
+- Upgrade to helix 23.10
+
+09:32 work Gather info
+
+09:41 work Test 1.11 RC2
+
+11:00 meeting Weekly planning
+
+- Testing
+  - Ran into a bunch of issues with container dashboard with nerdctl
+- Created 1.12 epic for snapshots
+
+11:40 personal Distracted
+
+11:54 meeting Chat with Jan about container dashboard issue 
+
+12:05 break Lunch
+
+13:02 work Test 1.11 RC2(3?)
+
+Command to zip logs:
+zip -ro9 logs.zip *
+
+14:10 personal Distracted
+
+14:35 work Test 1.11 RC2(3?)
+
+15:59 work Make changes to OBS for 1.11
+
+16:03 work Upgrade to helix 23.10
+
+16:36 work Recap

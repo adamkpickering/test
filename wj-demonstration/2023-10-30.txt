@@ -1,0 +1,55 @@
+October 30, 2023
+
+To Do
+- Groom to do list
+- Upgrade to helix 23.10
+- Remove windows exclusion from BATS test
+- Read into pointer vs value receivers
+- Create issue: address Mark's comment about ExitError
+- Put card into clsr: using platform-specific syscall pkg
+- Put card into clsr: how regexp package works
+- Put card into clsr: checking for file existence (three states, see SO)
+- Do not print error twice in wj
+- Do not print error twice in clsr
+- Add date field to wj
+
+Done
+- Last week
+- Test 1.11 RC1
+- Create snapshots epic for 1.12
+
+09:17 work Gather info
+
+09:30 work Last week
+
+- Work on snapshots
+- Testing for 1.11 RC1
+- PR reviews
+
+09:39 work Test 1.11 RC1
+
+For retro: are we just setting arbitrary code freeze dates?
+Because we don't usually adhere to them.
+
+For retro: ideally test cases should not depend on other test cases;
+they should stand alone.
+
+12:00 meeting Standup
+
+- Just testing
+- Fedora AppImage appears to not work when configured to use
+  9p mount type, but this happens on 1.10 as well as RC1
+
+12:43 meeting 1-1 with Guna
+
+13:00 break Lunch
+
+14:03 work Test 1.11 RC1
+
+16:43 personal Deal with terrex shoes and groceries
+
+17:37 work Create snapshots epic for 1.12
+
+More work than I thought!
+
+18:34 work Recap

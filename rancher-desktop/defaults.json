@@ -1,0 +1,11 @@
+{
+  "application": {
+    "autoStart": true
+  },
+  "containerEngine": {
+    "name": "moby"
+  },
+  "kubernetes": {
+    "version": "1.24.10"
+  }
+}
