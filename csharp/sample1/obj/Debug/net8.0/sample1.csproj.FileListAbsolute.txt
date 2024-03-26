@@ -1,0 +1,15 @@
+/home/adam/dev/test/csharp/sample1/bin/Debug/net8.0/sample1
+/home/adam/dev/test/csharp/sample1/bin/Debug/net8.0/sample1.deps.json
+/home/adam/dev/test/csharp/sample1/bin/Debug/net8.0/sample1.runtimeconfig.json
+/home/adam/dev/test/csharp/sample1/bin/Debug/net8.0/sample1.dll
+/home/adam/dev/test/csharp/sample1/bin/Debug/net8.0/sample1.pdb
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.GeneratedMSBuildEditorConfig.editorconfig
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.AssemblyInfoInputs.cache
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.AssemblyInfo.cs
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.csproj.CoreCompileInputs.cache
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.sourcelink.json
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.dll
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/refint/sample1.dll
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.pdb
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/sample1.genruntimeconfig.cache
+/home/adam/dev/test/csharp/sample1/obj/Debug/net8.0/ref/sample1.dll
