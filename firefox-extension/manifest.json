@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Fuzzy History",
+  "version": "1.0",
+  "description": "A fuzzy finder for browser history",
+  "icons": {
+    "48": "icons/history.svg"
+  },
+  "permissions": [
+    "history"
+  ],
+  "sidebar_action": {
+    "default_icon": "icons/history.svg",
+    "default_title": "Fuzzy History",
+    "default_panel": "fuzzyHistory.html",
+    "open_at_install": true
+  }
+}
