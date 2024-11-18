@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<head>
+  <script>
+    let ws = new WebSocket("http://localhost:9124/websocket");
+    ws.onopen = () => {
+      console.log("connection opened");
+    }
+    ws.onmessage = (event) => {
+      console.log("data received:", event.data);
+    }
+    ws.onclose = (event) => {
+      console.log("connection closed", event.code, event.reason, event.wasClean);
+    }
+    ws.onerror = () => {
+      console.log("connection closed due to error");
+    }
+  </script>
+</head>
