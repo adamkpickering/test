@@ -1,0 +1,50 @@
+additionalLoggingSources:
+  rke:
+    enabled: true
+  kubeAudit:
+    enabled: true
+
+fluentbitAgentOverlay:
+  spec:
+    filterKubernetes:
+      Cache_Use_Docker_Id: "true"
+    inputTail:
+      "multiline.parser": [ docker ]
+
+global:
+  seLinux:
+    enabled: true
+
+fluentbit:
+  resources:
+    limits:
+      cpu: 500m
+      memory: 200M
+    requests:
+      cpu: 100m
+      memory: 200M
+  tolerations:
+    - key: node-role.kubernetes.io/controlplane
+      value: "true"
+      effect: NoSchedule
+    - key: node-role.kubernetes.io/etcd
+      value: "true"
+      effect: NoExecute
+
+loggingOverlay:
+  spec:
+    enableRecreateWorkloadOnImmutableFieldChange: true
+
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+  fsGroup: 2000
+  seccompProfile:
+    type: RuntimeDefault
+
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop: ["ALL"]
