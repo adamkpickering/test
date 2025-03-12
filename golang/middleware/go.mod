@@ -1,3 +1,3 @@
-module github.com/adamkpickering/devtest/middleware
+module github.com/adamkpickering/test/middleware
 
 go 1.23.2

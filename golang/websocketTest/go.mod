@@ -1,4 +1,4 @@
-module github.com/adamkpickering/devtest/websocketTest
+module github.com/adamkpickering/test/websocketTest
 
 go 1.23.2
 

@@ -1,3 +1,3 @@
-module github.com/adamkpickering/devtest/golang/httpServer
+module github.com/adamkpickering/test/golang/httpServer
 
 go 1.22.0

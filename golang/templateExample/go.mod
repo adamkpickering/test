@@ -1,4 +1,4 @@
-module github.com/adamkpickering/devtest/templateExample
+module github.com/adamkpickering/test/templateExample
 
 go 1.22.0
 

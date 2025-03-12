@@ -1,4 +1,4 @@
-module github.com/adamkpickering/devtest/injectScript
+module github.com/adamkpickering/test/injectScript
 
 go 1.23.2
 
