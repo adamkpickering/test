@@ -2,9 +2,7 @@ apiVersion: logging.banzaicloud.io/v1beta1
 kind: ClusterFlow
 metadata:
   name: elasticsearch
-  namespace: default
+  namespace: cattle-logging-system
 spec:
   globalOutputRefs:
     - elasticsearch
-  match:
-    - select: {}
