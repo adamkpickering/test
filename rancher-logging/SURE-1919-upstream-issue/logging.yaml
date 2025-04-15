@@ -1,0 +1,17 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Logging
+metadata:
+  name: rancher-logging-root
+  namespace: cattle-logging-system
+spec:
+  controlNamespace: cattle-logging-system
+  fluentd:
+    disablePvc: true
+    livenessProbe:
+      initialDelaySeconds: 30
+      periodSeconds: 15
+      tcpSocket:
+        port: 24240
+    metrics:
+      prometheusRules: false
+      serviceMonitor: false
