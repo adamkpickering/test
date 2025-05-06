@@ -16,15 +16,39 @@ let pairs = (
     each {|it| {source: $it.source, destination: $it.destination, present: ($it.source in $images)} }
 )
 
-let startingLetters = [a b c]
-# [d e f]
-# [g h i]
-# [j k l]
-# [m n o]
-# [p q r]
-# [s t]
-# [u v w]
-# [x y z]
+# let startingLetters = [a b c]
+# let startingLetters = [d e f]
+# let startingLetters = [g h]
+let startingLetters = [i j k]
+# let startingLetters = [l]
+# let startingLetters = [m n o p]
+# let startingLetters = [q]
+# let startingLetters = [r]
+# let startingLetters = [s t u v w x y z]
+
+# let startingLetterses = [
+#   [a b c]
+#   [d e f]
+#   [g h]
+#   [i j k]
+#   [l]
+#   [m n o p]
+#   [q]
+#   [r]
+#   [s t u v w x y z]
+# ]
+
+# for startingLetters in $startingLetterses {
+#   let filteredPairs = (
+#     $pairs |
+#     where {|it|
+#       ($startingLetters | any {|letter| $it.source | str starts-with $letter}) and (not $it.present)
+#     } 
+#   )
+#   print $"Pair count for letters ($startingLetters): ($filteredPairs | length)"
+# }
+
+# exit
 
 let filteredPairs = (
   $pairs |
