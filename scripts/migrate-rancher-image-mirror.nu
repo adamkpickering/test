@@ -19,10 +19,10 @@ let pairs = (
 # let startingLetters = [a b c]
 # let startingLetters = [d e f]
 # let startingLetters = [g h]
-let startingLetters = [i j k]
+# let startingLetters = [i j k]
 # let startingLetters = [l]
 # let startingLetters = [m n o p]
-# let startingLetters = [q]
+let startingLetters = [q]
 # let startingLetters = [r]
 # let startingLetters = [s t u v w x y z]
 
