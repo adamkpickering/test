@@ -26,8 +26,7 @@ func run() error {
 		if err != nil {
 			return fmt.Errorf("failed to parse %q: %w", rawRef, err)
 		}
-		fmt.Printf("%s host: %s\n", rawRef, ref.Host())
-		fmt.Printf("%s -> {Registry: %s, Repository: %s, Reference: %s}\n", rawRef, ref.Registry, ref.Repository, ref.Reference)
+		fmt.Printf("%s -> {Host: %s, Registry: %s, Repository: %s, Reference: %s}\n", rawRef, ref.Host(), ref.Registry, ref.Repository, ref.Reference)
 	}
 
 	return nil
