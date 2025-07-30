@@ -1,0 +1,27 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Output
+metadata:
+  name: http
+  namespace: quickstart
+spec:
+  http:
+    endpoint: http://http-echo-service
+    content_type: application/json
+    buffer:
+      type: memory
+      tags: time
+      timekey: 1s
+      timekey_wait: 0s
+---
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Flow
+metadata:
+  name: log-generator
+  namespace: quickstart
+spec:
+  match:
+    - select:
+        labels:
+          app.kubernetes.io/name: log-generator
+  localOutputRefs:
+    - http
