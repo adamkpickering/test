@@ -1,11 +1,10 @@
 apiVersion: logging.banzaicloud.io/v1beta1
-kind: ClusterOutput
+kind: Output
 metadata:
   name: elasticsearch
-  namespace: cattle-logging-system
 spec:
   elasticsearch:
-    host: quickstart-es-http.cattle-logging-system.svc.cluster.local
+    host: quickstart-es-http.default.svc.cluster.local
     port: 9200
     scheme: https
     ssl_verify: false
@@ -20,3 +19,15 @@ spec:
       timekey: 1m
       timekey_wait: 30s
       timekey_use_utc: true
+---
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Flow
+metadata:
+  name: log-generator
+spec:
+  match:
+    - select:
+        labels:
+          app.kubernetes.io/name: log-generator
+  localOutputRefs:
+    - elasticsearch

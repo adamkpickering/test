@@ -2,9 +2,8 @@ apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
   name: quickstart
-  namespace: cattle-logging-system
 spec:
-  version: 8.17.4
+  version: 9.1.2
   nodeSets:
   - name: default
     count: 1
