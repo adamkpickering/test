@@ -1,0 +1,14 @@
+creds:
+- pass: '{{ env "DOCKER_PASSWORD" }}'
+  registry: docker.io
+  repoAuth: true
+  user: '{{ env "DOCKER_USERNAME" }}'
+- pass: '{{ env "PRIME_PASSWORD" }}'
+  registry: registry.suse.com
+  repoAuth: true
+  user: '{{ env "PRIME_USERNAME" }}'
+sync:
+- source: registry.suse.com/bci/bci-micro:15.4.14.3
+  target: docker.io/adamkpickering/mirrored-bci-micro:15.4.14.3
+  type: image
+
