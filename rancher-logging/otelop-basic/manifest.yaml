@@ -1,0 +1,38 @@
+apiVersion: opentelemetry.io/v1beta1
+kind: OpenTelemetryCollector
+metadata:
+  name: simplest
+  namespace: default
+spec:
+  mode: daemonset
+  image: ghcr.io/open-telemetry/opentelemetry-collector-releases/opentelemetry-collector-contrib:0.138.0
+
+  volumes:
+    - name: varlog
+      hostPath:
+        path: /var/log
+
+  volumeMounts:
+  - name: varlog
+    mountPath: /var/log
+    readOnly: true
+
+  config:
+    receivers:
+      filelog:
+        include:
+          - /var/log/pods/*/*/*.log
+        include_file_path: true
+        operators:
+          - type: container
+            add_metadata_from_filepath: true
+
+    exporters:
+      debug: {}
+        # verbosity: detailed
+
+    service:
+      pipelines:
+        logs:
+          receivers: [filelog]
+          exporters: [debug]
