@@ -1,0 +1,38 @@
+apiVersion: opentelemetry.io/v1beta1
+kind: OpenTelemetryCollector
+metadata:
+  name: simplest
+  namespace: default
+spec:
+  mode: daemonset
+  image: ghcr.io/open-telemetry/opentelemetry-collector-releases/opentelemetry-collector-contrib:0.138.0
+
+  volumes:
+    - name: varlogjournal
+      hostPath:
+        path: /var/log/journal
+    - name: journalctl
+      hostPath:
+        path: /usr/bin/journalctl
+
+  volumeMounts:
+    - name: varlogjournal
+      mountPath: /var/log/journal
+      readOnly: true
+    - name: journalctl
+      mountPath: /usr/bin/journalctl
+
+  config:
+    receivers:
+      journald:
+        units: [k3s]
+
+    exporters:
+      debug:
+        verbosity: detailed
+
+    service:
+      pipelines:
+        logs:
+          receivers: [journald]
+          exporters: [debug]
