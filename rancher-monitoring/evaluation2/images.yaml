@@ -1,43 +1,43 @@
 - mirroredRepo: rancher/mirrored-prometheus-node-exporter
-  mirroredTag: v1.9.0
+  mirroredTag: v1.9.1
   appcoRepo: dp.apps.rancher.io/containers/node-exporter
-  appcoTag: 1.9.0-7.7
+  appcoTag: 1.9.1-11.3
   inAppco: yes
   origin: https://github.com/prometheus/node_exporter
 - mirroredRepo: rancher/mirrored-brancz-kube-rbac-proxy
-  mirroredTag: v0.18.2
+  mirroredTag: v0.19.1
   appcoRepo: dp.apps.rancher.io/containers/kube-rbac-proxy
-  appcoTag: 0.18.2-10.2
+  appcoTag: 0.19.1-15.2
   inAppco: yes
   origin: https://github.com/brancz/kube-rbac-proxy
 - mirroredRepo: rancher/mirrored-grafana-grafana
-  mirroredTag: 11.5.5
+  mirroredTag: 12.1.1
   appcoRepo: dp.apps.rancher.io/containers/grafana
-  appcoTag: 11.5.5-3.28
+  appcoTag: 12.1.1-2.2
   inAppco: yes
   origin: https://github.com/grafana/grafana
 - mirroredRepo: rancher/mirrored-kube-state-metrics-kube-state-metrics
-  mirroredTag: v2.15.0
+  mirroredTag: v2.17.0
   appcoRepo: dp.apps.rancher.io/containers/kube-state-metrics
-  appcoTag: 2.15.0-6.18
+  appcoTag: 2.17.0-10.7
   inAppco: yes
   origin: https://github.com/kubernetes/kube-state-metrics
 - mirroredRepo: rancher/mirrored-prometheus-alertmanager
   mirroredTag: v0.28.1
   appcoRepo: dp.apps.rancher.io/containers/alertmanager
-  appcoTag: 0.28.1-11.3
+  appcoTag: 0.28.1-12.7
   inAppco: yes
   origin: https://github.com/prometheus/alertmanager
 - mirroredRepo: rancher/mirrored-prometheus-operator-admission-webhook
-  mirroredTag: v0.80.1
+  mirroredTag: v0.85.0
   appcoRepo: dp.apps.rancher.io/containers/prometheus-admission-webhook
-  appcoTag: 0.80.1-4.3
+  appcoTag: 0.85.0-6.4
   inAppco: yes
   origin: https://github.com/prometheus-operator/prometheus-operator/pkgs/container/admission-webhook
 - mirroredRepo: rancher/mirrored-prometheus-operator-prometheus-operator
-  mirroredTag: v0.80.1
+  mirroredTag: v0.85.0
   appcoRepo: dp.apps.rancher.io/containers/prometheus-operator
-  appcoTag: 0.80.1-4.3
+  appcoTag: 0.85.0-6.4
   inAppco: yes
   origin: https://github.com/prometheus-operator/prometheus-operator
 - mirroredRepo: rancher/mirrored-prometheus-operator-prometheus-config-reloader
@@ -47,8 +47,8 @@
   inAppco: yes
   origin: https://github.com/prometheus-operator/prometheus-operator/pkgs/container/prometheus-config-reloader
 - mirroredRepo: rancher/mirrored-thanos-thanos
-  mirroredTag: v0.37.2
+  mirroredTag: v0.39.2
   appcoRepo: dp.apps.rancher.io/containers/thanos
-  appcoTag: 0.37.2-4.4
+  appcoTag: 0.39.2-7.3
   inAppco: yes
   origin: https://github.com/thanos-io/thanos
