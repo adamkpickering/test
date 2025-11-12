@@ -16,15 +16,12 @@ let result = (
 )
 
 $result |
-reject origin inAppco |
-insert currentImage {|it| $"($it.mirroredRepo):($it.mirroredTag)"} |
+insert mirroredImage {|it| $"($it.mirroredRepo):($it.mirroredTag)"} |
 insert appcoImage {|it| $"($it.appcoRepo):($it.appcoTag)"} |
-reject mirroredRepo mirroredTag appcoRepo appcoTag |
-each {|it|
-  {
-    currentImage: $it.currentImage,
-    currentCves: ($it.mirroredCves | select CRITICAL HIGH | transpose severity count | str join "\n"),
-    appcoImage: $it.appcoImage,
-    appcoCves: ($it.appcoCves | select CRITICAL HIGH | transpose severity count | str join "\n")
-  }
-}
+select mirroredImage mirroredCves appcoImage appcoCves |
+each {|it| insert cveDiff {
+  CRITICAL: ($it.appcoCves.CRITICAL - $it.mirroredCves.CRITICAL),
+  HIGH: ($it.appcoCves.HIGH - $it.mirroredCves.HIGH),
+  MEDIUM: ($it.appcoCves.MEDIUM - $it.mirroredCves.MEDIUM),
+  LOW: ($it.appcoCves.LOW - $it.mirroredCves.LOW),
+}}
