@@ -1,0 +1,31 @@
+{{ define "priority1" }}
+first: priority1
+second: priority1
+third: priority1
+fourth: priority1
+{{ end }}
+
+{{ define "priority2" }}
+second: priority2
+third: priority2
+fourth: priority2
+{{ end }}
+
+{{ define "priority3" }}
+third: priority3
+fourth: priority3
+{{ end }}
+
+{{ define "priority4" }}
+fourth: priority4
+{{ end }}
+
+{{/* This demonstrates that the priority of the merge function is not
+as written in the comment in the Rancher Logging chart. Specifically,
+the first variable has the highest precedence, and the last has the
+lowest precedence.*/}}
+{{ $priority1 := fromYaml (include "priority1" .) }}
+{{ $priority2 := fromYaml (include "priority2" .) }}
+{{ $priority3 := fromYaml (include "priority3" .) }}
+{{ $priority4 := fromYaml (include "priority4" .) }}
+{{ toYaml (merge . $priority4 $priority3 $priority2 $priority1) }}
